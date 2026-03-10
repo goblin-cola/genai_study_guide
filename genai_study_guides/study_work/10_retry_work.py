@@ -11,6 +11,14 @@ Implement: call_with_retry(fn, max_retries=3, base_delay=1.0, retry_on=(Exceptio
 NOTE: For testing, use base_delay=0 so tests run instantly.
 
 Run this file to check: python 10_retry_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Write a retry wrapper that calls a function and retries on failure with exponential
+   backoff. How do you decide which exceptions to retry on vs. which to raise immediately?"
+2. "Our service calls an external API that occasionally returns 429s and 500s. Implement
+   a retry mechanism with exponential backoff. What's the formula for wait time on
+   attempt N?"
+3. "Why is exponential backoff better than fixed-interval retries? Implement it."
 """
 
 import time

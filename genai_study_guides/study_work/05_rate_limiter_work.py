@@ -10,6 +10,14 @@ Implement class RateLimiter with:
 - Same pattern as sliding window counts!
 
 Run this file to check: python 05_rate_limiter_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Design a rate limiter that allows at most N requests per user in a sliding time
+   window. What's the time complexity of each request check?"
+2. "We're seeing abuse on our API. Implement a per-user rate limiter using a sliding
+   window approach. How would you handle concurrent requests in production?"
+3. "How is a sliding window rate limiter different from a fixed window one? Implement
+   the sliding window version."
 """
 
 from collections import deque

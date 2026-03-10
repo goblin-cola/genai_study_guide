@@ -15,6 +15,16 @@ Implement: score_users(edges, known_fraudsters)
 Hint: use a deque for BFS. Start all fraudsters at distance 0.
 
 Run this file to check: python 14_graph_scoring_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Given a network of users connected by shared attributes (devices, addresses, etc.)
+   and a set of known fraudsters, how would you assign risk scores to all users based
+   on their graph distance from fraud? Implement it with BFS."
+2. "How would you use graph analysis to detect fraud rings? Given edges between users
+   and a set of known bad actors, compute a risk level for every user based on how many
+   hops they are from a fraudster."
+3. "Implement a multi-source BFS that starts from all known fraudsters simultaneously
+   and assigns risk tiers based on distance."
 """
 
 from collections import deque

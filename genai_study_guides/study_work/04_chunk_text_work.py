@@ -8,6 +8,12 @@ Implement: chunk_text(text, size, overlap)
 - Return list of strings
 
 Run this file to check: python 04_chunk_text_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Our documents are too long to fit in the LLM's context window. How would you split
+   text into fixed-size chunks with overlap so we don't lose context at chunk boundaries?"
+2. "Implement a text chunking function that takes a max size and an overlap amount.
+   Why is overlap important in a RAG pipeline?"
 """
 
 

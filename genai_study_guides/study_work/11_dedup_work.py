@@ -14,6 +14,14 @@ Implement two functions:
    - Return the filtered list
 
 Run this file to check: python 11_dedup_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Our retrieval system sometimes returns near-duplicate chunks. How would you filter
+   out chunks that are too similar to ones already selected? Implement a deduplication
+   function using Jaccard similarity."
+2. "Implement Jaccard similarity between two text strings. Then use it to deduplicate a
+   ranked list of search results, keeping the first occurrence when two items are above
+   a similarity threshold."
 """
 
 

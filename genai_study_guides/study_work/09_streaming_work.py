@@ -10,6 +10,13 @@ Implement: aggregate_stream(token_iterator, max_tokens=500, stop_phrase="[DONE]"
 - Strip whitespace from the final text
 
 Run this file to check: python 09_streaming_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Our LLM streams tokens one at a time. Write a function that collects them into a
+   final string, stopping when it sees a stop phrase or hits a max token count. Return
+   the text and the reason it stopped."
+2. "How would you handle consuming a streaming LLM response where you need to enforce
+   both a stop sequence and a max output length?"
 """
 
 

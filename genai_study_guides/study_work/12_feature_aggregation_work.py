@@ -16,6 +16,15 @@ Implement: compute_features(events, window)
 This builds on the sliding window pattern from #02!
 
 Run this file to check: python 12_feature_aggregation_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "For each incoming transaction, we need to compute real-time features: count, total,
+   and average spend in the last N seconds, plus a velocity flag if the current amount
+   is more than 2x the running average. How would you implement this?"
+2. "Design a feature engineering pipeline for fraud detection that computes sliding
+   window aggregates per user in a single pass over an event stream."
+3. "What is a velocity change indicator in fraud detection? Implement it as part of a
+   real-time feature computation system."
 """
 
 from collections import deque

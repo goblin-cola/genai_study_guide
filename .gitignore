@@ -1,0 +1,8 @@
+.idea/
+.claude/
+__pycache__/
+*.pyc
+*.zip
+*.egg-info/
+.env
+venv/

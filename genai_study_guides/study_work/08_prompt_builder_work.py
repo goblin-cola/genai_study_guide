@@ -12,6 +12,13 @@ Implement two functions:
    - Return (prompt_string, num_chunks_used)
 
 Run this file to check: python 08_prompt_builder_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "You have a system prompt, a user query, and a list of retrieved context chunks, but
+   a fixed token budget. How would you greedily pack as many chunks as possible into
+   the prompt without exceeding the limit?"
+2. "Design a prompt construction function for a RAG system that respects a max token
+   count. How would you estimate token usage without calling the tokenizer?"
 """
 
 

@@ -14,6 +14,14 @@ Implement: evaluate(transaction, rules)
               "allow" if nothing fired
 
 Run this file to check: python 13_rule_engine_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Design a simple rule engine where each rule has a name, a severity level (block or
+   review), and a check function. Given a transaction, evaluate all rules and return
+   the highest-severity decision along with which rules triggered."
+2. "We need a configurable risk decisioning system. Business analysts define rules like
+   'block if amount > 10000' or 'review if device is new.' How would you structure and
+   evaluate these rules?"
 """
 
 

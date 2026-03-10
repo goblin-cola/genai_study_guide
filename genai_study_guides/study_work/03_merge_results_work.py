@@ -8,11 +8,26 @@ Implement: merge_results(list_a, list_b)
 - Return sorted by score descending
 
 Run this file to check: python 03_merge_results_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "We run two different search systems (keyword and semantic). Each returns ranked
+   results with scores. How would you merge them into a single ranked list, handling
+   duplicates?"
+2. "You have two sorted lists of (id, score) pairs with possible overlapping IDs.
+   Merge them keeping the highest score per ID and return the result sorted by score
+   descending."
 """
 
 
 def merge_results(list_a, list_b):
-    # YOUR CODE HERE
+    best = {}
+
+    list = list_a + list_b
+    for doc_id, score in list:
+        best[doc_id] = score
+
+    result = sorted(best.items(), key=lambda x: x[1], reverse=True)
+    return result
     pass
 
 

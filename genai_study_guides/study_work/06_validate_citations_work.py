@@ -10,6 +10,14 @@ Implement: validate_citations(retrieved, citations)
 Hint: convert retrieved to a set for fast lookups.
 
 Run this file to check: python 06_validate_citations_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Our LLM sometimes cites sources that weren't in the retrieved context. Write a
+   function that filters the model's citations to only those that actually exist in
+   the retrieved chunks."
+2. "Given a list of retrieved document IDs and a list of cited IDs from the model's
+   response, return only the valid citations. What data structure gives you the best
+   lookup performance?"
 """
 
 

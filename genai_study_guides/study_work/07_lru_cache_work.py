@@ -11,6 +11,14 @@ Hint: use OrderedDict from collections.
   - popitem(last=False) removes the oldest item
 
 Run this file to check: python 07_lru_cache_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Implement an LRU cache with O(1) get and put. What happens when the cache is full
+   and a new item is added?"
+2. "We're making expensive API calls and want to cache results. Design a cache that
+   evicts the least recently used item when it hits capacity."
+3. "Walk me through how you'd implement an LRU cache. What data structures would you
+   combine and why?"
 """
 
 from collections import OrderedDict

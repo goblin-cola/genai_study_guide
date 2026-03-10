@@ -15,6 +15,15 @@ Implement two functions:
    - Returns list of (doc_id, score) sorted by score descending
 
 Run this file to check your answers: python 01_topk_cosine_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Given a search query embedding and a database of document embeddings, how would you
+   find the most relevant documents? Write a function that returns the top K results
+   ranked by similarity."
+2. "Implement cosine similarity from scratch. How would you handle edge cases like
+   zero vectors?"
+3. "We have a recommendation system that needs to find the K nearest neighbors to a
+   user's preference vector. How would you implement this efficiently?"
 """
 
 from math import sqrt
@@ -22,11 +31,29 @@ from math import sqrt
 
 def cosine_similarity(a, b):
     # YOUR CODE HERE
+    dot = sum(x*y for x, y in zip(a,b))
+    mag_a = sqrt(sum(x*x for x in a))
+    mag_b = sqrt(sum(x*x for x in b))
+
+    if mag_a == 0  or mag_b == 0:
+        return 0.0
+
+    return dot / (mag_a * mag_b)
     pass
 
 
 def top_k(query, docs, k):
-    # YOUR CODE HERE
+    #keep track of scores for each doc
+    scored = []
+    # for every doc score the doc against the query
+    for doc_id, embedding in docs:
+        score = cosine_similarity(query, embedding)
+        scored.append((doc_id, score))
+
+    # reorder the results with highest on top
+    scored.sort(key=lambda x: x[1], reverse=True)
+    # return the top k results
+    return scored[:k]
     pass
 
 

@@ -10,13 +10,44 @@ Implement: sliding_window_counts(events, window_seconds)
 Hint: use a deque per user. Add timestamps, remove expired ones from front.
 
 Run this file to check: python 02_sliding_window_work.py
+
+INTERVIEW QUESTIONS (this topic):
+1. "Given a stream of user events with timestamps, how would you count how many events
+   each user has in the last N seconds? Optimize for a large event stream."
+2. "Design a function that, for each transaction, tells you how many transactions that
+   user made in the past 60 seconds. What data structure would you use and why?"
 """
 
 from collections import deque
 
 
 def sliding_window_counts(events, window_seconds):
-    # YOUR CODE HERE
+    queues = {}
+    results = []
+
+    # for each event
+    for user_id, amount, timestamp in events:
+        #print(user_id, amount, timestamp)
+        #get the users queue
+        if user_id not in queues:
+            queues[user_id] = deque()
+        queue = queues[user_id]
+        #print(f"queue: {queue}")
+
+        #append this event to the end of the queue
+        queue.append(timestamp)
+
+        #delete expired events from the front of the queue
+        cutoff = timestamp -  window_seconds
+        while queue and queue[0] < cutoff:
+            queue.popleft()  # remove from front (oldest)
+
+        # whatever is left in the queue = events in the window
+        count = len(queue)
+        results.append((user_id, timestamp, count))
+
+    return results
+
     pass
 
 
